@@ -11,9 +11,7 @@
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,
-
-    /* Linting */
+    "noEmit": false,  // Hier auf false setzen
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
