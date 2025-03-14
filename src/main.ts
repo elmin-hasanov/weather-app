@@ -43,8 +43,8 @@ function getWeatherHeat(city: string) {
       )
         .then((response) => response.json())
         .then((endWeatherData) => {
-          console.log(endWeatherData.main.temp);
           temperature.innerHTML = `${endWeatherData.main.temp} °C`;
+          weatherIcon.src = `http://openweathermap.org/img/wn/${endWeatherData.weather[0].icon}@2x.png`;
         });
     })
     .catch((err) => console.log(err));
