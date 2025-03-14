@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wetter App</title>
+    <link rel="stylesheet" crossorigin href="/weather-app/assets/index-CV5yzwY1.css">
+  </head>
+  <body>
+    <main>
+
+      <div class="logo"><a href="./index.html"><img src="/weather-app/assets/logo-CjHZtdeJ.png"></a></div>
+      <!-- Eingabefeld -->
+      <div class="input-container">
+        <input type="text" id="cityInput" placeholder="City" />
+        <button id="searchButton">&lt;Check_Weather&gt;</button>
+        <div class="error" id="errorMessage"></div>
+      </div>
+      <!-- Wetterdaten -->
+      <div class="weather-container" id="weatherContainer">
+        <h2 id="cityName">Please enter the city name.</h2>
+        <h3 id="countryName"></h3>
+        <div class="weather-icon-container">
+          <div id="weatherIcon" class="weather-icon" ></div>
+          <div><p id="temperature"></p></div>
+        </div>
+      </div>
+      <!-- wetter info -->
+      <div class="weather-info">
+        <div id="sunset">Sunset</div>
+        <div id="localTime">LocalTime</div>
+        <div id="sunrise">Sunrise</div>
+        <div id="windSpeed">WindSpeed</div>
+        <div id="cloudiness">Cloudiness</div>
+        <div id="pressure">Pressure</div>
+        <div id="humidity">Humidity</div>
+        <div id="geoCoords">GeoCoords</div>
+      </div>
+    </main>
+    <div class="copy">
+      <p>© 03/2025 by Mina, Max, Elmin</p>
+    </div>
+    <script src="./src/main.ts"></script>
+  </body>
+</html>
