@@ -45,6 +45,17 @@ function getWeatherHeat(city: string) {
         .then((endWeatherData) => {
           temperature.innerHTML = `${endWeatherData.main.temp} °C`;
           weatherIcon.src = `http://openweathermap.org/img/wn/${endWeatherData.weather[0].icon}@2x.png`;
+          cityName.innerHTML = `${endWeatherData.name}`
+          countryName.innerHTML = `${endWeatherData.sys.country}`
+          localTime.innerHTML = `LocalTime ${endWeatherData.dt}`
+          windSpeed.innerHTML = `WindSpeed ${endWeatherData.wind.speed}`
+          cloudiness.innerHTML = `Cloudiness ${endWeatherData.clouds.all} %`
+          pressure.innerHTML = `Pressure ${endWeatherData.main.pressure} hpa`
+          humidity.innerHTML = `Humidity ${endWeatherData.main.humidity} %`
+          sunrise.innerHTML = `Sunrise ${endWeatherData.sys.sunrise}`
+          sunset.innerHTML = `Sunset ${endWeatherData.sys.sunset}`
+          geoCoords.innerHTML = `GeoCoords ${endWeatherData.coord.lon}, ${endWeatherData.coord.lat}`
+
         });
     })
     .catch((err) => console.log(err));
