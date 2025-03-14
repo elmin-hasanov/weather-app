@@ -1,5 +1,33 @@
-const myWeatherKey = "fa2537d770241796fc4f44123fb03c26";
+const cityInput = document.getElementById("cityInput") as HTMLInputElement;
+const searchBtn = document.getElementById("searchButton") as HTMLButtonElement;
+const weatherContainer = document.getElementById("weatherContainer") as HTMLDivElement;
+const cityName = document.getElementById("cityName") as HTMLParagraphElement;
+const countryName = document.getElementById("countryName") as HTMLParagraphElement;
+const weatherIcon = document.getElementById("weatherIcon") as HTMLImageElement;
+const temperature = document.getElementById("temperature") as HTMLParagraphElement;
 
+const localTime = document.getElementById("localTime") as HTMLParagraphElement;
+const windSpeed = document.getElementById("windSpeed") as HTMLParagraphElement;
+const cloudiness = document.getElementById("cloudiness") as HTMLParagraphElement;
+const pressure = document.getElementById("pressure") as HTMLParagraphElement;
+const humidity = document.getElementById("humidity") as HTMLParagraphElement;
+const sunrise = document.getElementById("sunrise") as HTMLParagraphElement;
+const sunset = document.getElementById("sunset") as HTMLParagraphElement;
+const geoCoords = document.getElementById("geoCoords") as HTMLParagraphElement;
+
+
+cityInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    getWeatherHeat(cityInput.value);
+  }
+})
+
+searchBtn.addEventListener("click", () => {
+  getWeatherHeat(cityInput.value);
+});
+
+
+const myWeatherKey = "fa2537d770241796fc4f44123fb03c26";
 function getWeatherHeat(city: string) {
   fetch(
     `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${myWeatherKey}`
@@ -16,6 +44,7 @@ function getWeatherHeat(city: string) {
         .then((response) => response.json())
         .then((endWeatherData) => {
           console.log(endWeatherData.main.temp);
+          temperature.innerHTML = `${endWeatherData.main.temp} °C`;
         });
     })
     .catch((err) => console.log(err));
