@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wetter App</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Aktuelles Wetter</h1>
+      <!-- Eingabefeld -->
+      <div class="input-container">
+        <input type="text" id="cityInput" placeholder="Stadt eingeben" />
+        <button id="searchButton">Check/Weather</button>
+      </div>
+      <!-- Wetterdaten -->
+      <div class="weather-container" id="weatherContainer">
+        <h2 id="cityName"></h2>
+        <h3 id="cityName"></h3>
+        <img id="weatherIcon" class="weather-icon" src="" alt="Wetter Icon" />
+        <p id="temperature">*</p>
+      </div>
+      <!-- wetter info -->
+      <div class="weather-info">
+        <p id="localTime">-</p>
+        <p id="windSpeed">-</p>
+        <p id="cloudiness">-</p>
+        <p id="pressure">-</p>
+        <p id="humidity">-</p>
+        <p id="sunrise">-</p>
+        <p id="sunset">-</p>
+        <p id="geoCoords">-</p>
+      </div>
+
+      <div class="error" id="errorMessage"></div>
+    </main>
+    <script src="./src/main.ts"></script>
+  </body>
+</html>
