@@ -8,33 +8,38 @@
   </head>
   <body>
     <main>
-      <h1>Aktuelles Wetter</h1>
+
+      <div class="logo"><a href="./index.html"><img src="./src/logo.png"></a></div>
       <!-- Eingabefeld -->
       <div class="input-container">
-        <input type="text" id="cityInput" placeholder="Stadt eingeben" />
+        <input type="text" id="cityInput" placeholder="City" />
         <button id="searchButton">Check/Weather</button>
+        <div class="error" id="errorMessage"></div>
       </div>
       <!-- Wetterdaten -->
       <div class="weather-container" id="weatherContainer">
-        <h2 id="cityName"></h2>
+        <h2 id="cityName">Please enter the city name.</h2>
         <h3 id="countryName"></h3>
-        <img id="weatherIcon" class="weather-icon" src="" alt="Wetter Icon" />
-        <p id="temperature">*</p>
+        <div class="weather-icon-container">
+          <div id="weatherIcon" class="weather-icon" ></div>
+          <div><p id="temperature"></p></div>
+        </div>
       </div>
       <!-- wetter info -->
       <div class="weather-info">
-        <p id="localTime">-</p>
-        <p id="windSpeed">-</p>
-        <p id="cloudiness">-</p>
-        <p id="pressure">-</p>
-        <p id="humidity">-</p>
-        <p id="sunrise">-</p>
-        <p id="sunset">-</p>
-        <p id="geoCoords">-</p>
+        <div id="sunset">Sunset</div>
+        <div id="localTime">LocalTime</div>
+        <div id="sunrise">Sunrise</div>
+        <div id="windSpeed">WindSpeed</div>
+        <div id="cloudiness">Cloudiness</div>
+        <div id="pressure">Pressure</div>
+        <div id="humidity">Humidity</div>
+        <div id="geoCoords">GeoCoords</div>
       </div>
-
-      <div class="error" id="errorMessage"></div>
     </main>
+    <div class="copy">
+      <p>© 03/2025 by Mina, Max, Elmin</p>
+    </div>
     <script src="./src/main.ts"></script>
   </body>
 </html>
