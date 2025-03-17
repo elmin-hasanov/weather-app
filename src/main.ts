@@ -36,7 +36,7 @@ searchBtn.addEventListener("click", () => {
 const myWeatherKey = "79d687152090a1108c1deb50501a57e1";
 function getWeatherHeat(city: string) {
   fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${myWeatherKey}`
+    `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${myWeatherKey}`
   )
     .then((response) => response.json())
     .then((myWeatherData) => {
@@ -53,7 +53,7 @@ function getWeatherHeat(city: string) {
           console.log(endWeatherData.weather[0].main);
           addAnimatedBackgroundForWeather(endWeatherData.weather[0].main);
 
-          weatherIcon.innerHTML = `<img src="http://openweathermap.org/img/wn/${endWeatherData.weather[0].icon}@2x.png"/>`;
+          weatherIcon.innerHTML = `<img src="https://openweathermap.org/img/wn/${endWeatherData.weather[0].icon}@2x.png"/>`;
           cityName.innerHTML = `${endWeatherData.name}`;
           countryName.innerHTML = `${endWeatherData.sys.country}`;
 
